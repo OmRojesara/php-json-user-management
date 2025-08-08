@@ -1,0 +1,27 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.idea/
+.vscode/
+nbproject/
+*.sublime-project
+*.sublime-workspace
+
+# PHP dependencies
+/vendor/
+/composer.lock
+
+# Environment & configuration
+.env
+.env.local
+.env.*.local
+
+# Logs & temp
+*.log
+tmp/
+cache/
+
+# Uploads (if any)
+uploads/
