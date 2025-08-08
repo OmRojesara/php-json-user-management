@@ -1,6 +1,5 @@
 <?php
 
-
 require_once 'classes/Helper.php';
 require_once 'classes/User.php';
 require_once 'classes/UserRepository.php';
@@ -11,13 +10,15 @@ $controller = new UserController();
 
 $action = $_GET['action'] ?? 'list';
 
-// Restrict actions unless user is logged in, except allowed public actions
-if (!isset($_SESSION['user']) && !in_array($action, ['login', 'do_login', 'register', 'do_register'])) {
+
+if (!isset($_SESSION['user']) && !in_array($action, ['login', 'do_login', 'register', 'do_register'])) 
+{
     $controller->showLoginForm();
     exit;
 }
 
-switch ($action) {
+switch ($action) 
+{
     case 'login':
         $controller->doLogin();
         break;
